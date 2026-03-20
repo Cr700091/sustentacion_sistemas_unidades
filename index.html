@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <title>EnergyCalc Pro</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
 <header>
     <h1>EnergyCalc Pro</h1>
     <p>¡Optimiza y analiza la eficiencia energética para tu empresa!</p>
-
 </header>
 
-<section> <!-- Sección de encabezado -->
+<section>
     <div class="card">
         <h2>Sobre el software</h2>
         <p>
@@ -22,65 +22,58 @@
         </p>
     </div>
 </section>
-<section><!-- Sección de porque necesitan las empresas -->
+
+<section>
     <div class="card">
         <h2>¿porque las empresas necsitan energycalc pro?</h2>
         <p>
-           Hoy en día, muchas empresas enfrentan problemas como:
-
-Consumo energético excesivo ⚡
-
-Altos costos operativos 💸
-
-Falta de control y monitoreo 📉
-
-Ineficiencia en procesos productivos 🏭
-
-EnergyCalc Pro está diseñado para resolver estos problemas mediante análisis precisos y herramientas inteligentes de cálculo.
+            Hoy en día, muchas empresas enfrentan problemas como:
+            Consumo energético excesivo ⚡
+            Altos costos operativos 💸
+            Falta de control y monitoreo 📉
+            Ineficiencia en procesos productivos 🏭
+            EnergyCalc Pro está diseñado para resolver estos problemas mediante análisis precisos y herramientas inteligentes de cálculo.
         </p>
     </div>
 </section>
 
-<section><!-- Sección de funciones -->
+<section>
     <div class="card">
         <h2>Funciones del software</h2>
         <ul>
-    <li>📊 Reportes automatizados</li>
-    <li>⚙️ Optimización de recursos</li>
-    <li>⏱️ Monitoreo continuo</li>
-</ul>
+            <li>📊 Reportes automatizados</li>
+            <li>⚙️ Optimización de recursos</li>
+            <li>⏱️ Monitoreo continuo</li>
+        </ul>
     </div>
 </section>
-<section>
 
-    <section><!-- Sección de Beneficios -->
+<section>
     <div class="card">
         <h2>Beneficios para las empresas</h2>
         <ul>
-    <li>Reducción de costos energéticos hasta un 30%</li>
-    <li>Mejora en la productividad</li>
-    <li>Cumplimiento de normativas ambientales 🌱</li>
-    <li>Toma de decisiones basada en datos</li>
-    <li>Retorno de inversión rápido (ROI)</li>
-</ul>
+            <li>Reducción de costos energéticos hasta un 30%</li>
+            <li>Mejora en la productividad</li>
+            <li>Cumplimiento de normativas ambientales 🌱</li>
+            <li>Toma de decisiones basada en datos</li>
+            <li>Retorno de inversión rápido (ROI)</li>
+        </ul>
     </div>
 </section>
+
 <section>
-    <section><!-- Sección de Aplicaciones en empresas -->
     <div class="card">
         <h2>Sectores donde se puede aplicar</h2>
         <ul>
-    <li>Industrias manufactureras</li>
-    <li>Empresas de construcción</li>
-    <li>Centros logísticos</li>
-    <li>Hospitales 🏥</li>
-    <li>Hoteles 🏨</li>
-    <li>Oficinas corporativas</li>
-</ul>
+            <li>Industrias manufactureras</li>
+            <li>Empresas de construcción</li>
+            <li>Centros logísticos</li>
+            <li>Hospitales 🏥</li>
+            <li>Hoteles 🏨</li>
+            <li>Oficinas corporativas</li>
+        </ul>
     </div>
 </section>
-<section>
-
 
 <section>
     <div class="card">
@@ -97,34 +90,6 @@ EnergyCalc Pro está diseñado para resolver estos problemas mediante análisis 
         <div id="resultado" class="result"></div>
     </div>
 </section>
-
-
-<script>
-function calcular() {
-    let e_util = parseFloat(document.getElementById("e_util").value);
-    let e_total = parseFloat(document.getElementById("e_total").value);
-    let resultado = document.getElementById("resultado");
-
-    if (isNaN(e_util) || isNaN(e_total)) {
-        resultado.innerHTML = "⚠️ Ingresa valores válidos.";
-        return;
-    }
-
-    if (e_util > e_total) {
-        resultado.innerHTML = "❌ La energía útil no puede ser mayor que la total.";
-        return;
-    }
-
-    if (e_total === 0) {
-        resultado.innerHTML = "❌ La energía total no puede ser 0.";
-        return;
-    }
-
-    let n = (e_util / e_total) * 100;
-
-    resultado.innerHTML = "✅ Eficiencia energética: " + n.toFixed(2) + "%";
-}
-</script>
 
 </body>
 </html>
